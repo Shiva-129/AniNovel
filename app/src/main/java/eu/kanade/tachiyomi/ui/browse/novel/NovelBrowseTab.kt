@@ -140,13 +140,6 @@ data object NovelBrowseTab : Tab {
                 novels.isEmpty() && searchQuery.isNullOrEmpty() -> EmptyScreen(
                     stringRes = MR.strings.information_empty_library,
                     modifier = Modifier.padding(contentPadding),
-                    actions = persistentListOf(
-                        EmptyScreenAction(
-                            stringRes = MR.strings.getting_started_guide,
-                            icon = Icons.AutoMirrored.Outlined.HelpOutline,
-                            onClick = {},
-                        ),
-                    ),
                 )
                 novels.isEmpty() -> EmptyScreen(
                     message = stringResource(MR.strings.no_results_found),
